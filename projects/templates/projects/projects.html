@@ -1,15 +1,16 @@
-{% extends 'main.html' %}
-
-
-{% block content %}
-
-{% if number > 10 %}
+{% extends 'main.html' %} {% block content %} {% if number > 10 %}
 <p>Number is greater than 10</p>
 {% else %}
-<p>Number is less than 10 </p>
+<p>Number is less than 10</p>
 {% endif %}
 
-<p>Hello {{message}} </p>
+<p>Hello {{message}}</p>
 <h1>HELLLOOOO</h1>
+
+<ul>
+  {% for project in projects %}
+    <li>Title: {{project.title}}-----{{project.description}}</li>
+  {% endfor %}
+</ul>
 
 {% endblock %}
